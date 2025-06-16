@@ -1,4 +1,3 @@
-// import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
@@ -19,8 +18,8 @@ function Copyright() {
       }}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        Goat Cheese Day
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
