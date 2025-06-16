@@ -4,7 +4,6 @@ import materialTheme from "./material-theme.json";
 
 const { light, dark } = materialTheme.schemes;
 
-// --- Custom Theme Mapping Function ---
 const buildMuiTheme = (scheme: any, mode: "light" | "dark"): ThemeOptions => ({
   palette: {
     mode,
@@ -220,7 +219,7 @@ const buildMuiTheme = (scheme: any, mode: "light" | "dark"): ThemeOptions => ({
       },
     },
   },
-  // Optional: store custom tokens for app-wide use
+
   custom: {
     surfaceContainerHigh: scheme.surfaceContainerHigh,
     surfaceContainerHighest: scheme.surfaceContainerHighest,
@@ -229,7 +228,6 @@ const buildMuiTheme = (scheme: any, mode: "light" | "dark"): ThemeOptions => ({
   },
 });
 
-// --- Extend MUI Theme Type Definitions ---
 declare module "@mui/material/styles" {
   interface Palette {
     surface: {
@@ -274,6 +272,5 @@ declare module "@mui/material/styles" {
   }
 }
 
-// --- Export Final Themes ---
 export const lightTheme = createTheme(buildMuiTheme(light, "light"));
 export const darkTheme = createTheme(buildMuiTheme(dark, "dark"));
