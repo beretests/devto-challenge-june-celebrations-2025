@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fontsource-variable/lora": "^5.2.6",
     "@fontsource-variable/playfair-display": "^5.2.6",
-    "@mui/material": "latest",
+    "@mui/icons-material": "^7.1.1",
+    "@mui/material": "^7.1.1",
     "@tailwindcss/vite": "latest",
+    "framer-motion": "^12.19.1",
     "react": "latest",
     "react-dom": "latest",
     "tailwindcss": "latest",

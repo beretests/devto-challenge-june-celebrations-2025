@@ -49,6 +49,9 @@ const buildMuiTheme = (scheme: any, mode: "light" | "dark"): ThemeOptions => ({
       main: scheme.inversePrimary,
       contrastText: scheme.inverseOnSurface ?? scheme.onPrimary,
     },
+    custom: {
+      onBackground: scheme.onBackground,
+    },
   },
   typography: {
     fontFamily: '"Lora Variable", "Roboto", "Helvetica", "Arial", sans-serif',
@@ -70,6 +73,12 @@ const buildMuiTheme = (scheme: any, mode: "light" | "dark"): ThemeOptions => ({
       fontWeight: 500,
       color: scheme.onBackground,
     },
+    // h6: {
+    //   fontFamily: '"Playfair Display Variable", serif',
+    //   fontSize: "1.75rem",
+    //   fontWeight: 500,
+    //   color: scheme.onPrimary,
+    // },
     body1: {
       fontFamily: '"Lora Variable", serif',
       fontSize: "1rem",
@@ -81,7 +90,7 @@ const buildMuiTheme = (scheme: any, mode: "light" | "dark"): ThemeOptions => ({
       color: scheme.onSurfaceVariant,
     },
     button: {
-      textTransform: "none",
+      textTransform: "uppercase",
       fontWeight: 500,
     },
   },
@@ -240,6 +249,9 @@ declare module "@mui/material/styles" {
       light: string;
       dark: string;
     };
+    custom: {
+      onBackground: string;
+    };
   }
   interface PaletteOptions {
     surface?: {
@@ -251,6 +263,9 @@ declare module "@mui/material/styles" {
       contrastText: string;
       light: string;
       dark: string;
+    };
+    custom?: {
+      onBackground: string;
     };
   }
 
