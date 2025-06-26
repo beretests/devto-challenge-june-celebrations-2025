@@ -9,7 +9,7 @@ const ThemeSelect = () => {
       sx={{
         backgroundColor: "background.paper",
         px: 1,
-        pb: 0.5,
+        pb: 1,
         borderRadius: 2,
       }}
     >
@@ -23,6 +23,11 @@ const ThemeSelect = () => {
           onChange={(e) =>
             setTheme(e.target.value as "light" | "dark" | "system")
           }
+          sx={{
+            ".MuiSelect-select": {
+              p: 1,
+            },
+          }}
         >
           <MenuItem value={"light"}>Light</MenuItem>
           <MenuItem value={"dark"}>Dark</MenuItem>

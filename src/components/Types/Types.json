@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Fresh Chèvre",
+    "text": "Soft, tangy, and spreadable – perfect for crackers or salads.",
+    "image": "/types/fresh-chevre.webp",
+    "credit": "The Practical Kitchen",
+    "creditUrl": "https://thepracticalkitchen.com/yes-you-should-make-your-own-goat-cheese-chevre/"
+  },
+  {
+    "title": "Aged Goat Cheese",
+    "text": "Firm, complex flavor – great for cheese boards.",
+    "image": "/types/aged-goat-cheese-1.png",
+    "credit": "Gourm.it",
+    "creditUrl": "https://www.gourm.it/en/2291-aged-goat/"
+  },
+  {
+    "title": "Blue Goat Cheese",
+    "text": "Bold and earthy – ideal for adventurous palates.",
+    "image": "/types/ribblesdale-blue-goat-cheese-2048x1536.jpeg",
+    "credit": "The Pangbourne Cheese Shop",
+    "creditUrl": "https://cheese-etc.co.uk/cheese-shop/cheese/goats-milk-cheese/english-goats-milk-cheese/ribblesdale-blue-goat-cheese/"
+  },
+  {
+    "title": "Flavored Goat Cheese",
+    "text": "Infused with herbs, honey, or spices – delicious variety.",
+    "image": "/types/flavored-goat-cheese.webp",
+    "credit": "Farm Curious",
+    "creditUrl": "https://www.farmcurious.com/blogs/farmcurious/47394501-how-to-make-the-best-goat-cheese"
+  }
+]

@@ -1,39 +1,77 @@
-# Material UI - Vite example with Tailwind CSS in TypeScript
+# Goat Cheese Day – Vite + React + Material UI + Tailwind CSS
 
-## How to use
+Celebrate Goat Cheese Day with this interactive, modern web app built using [Vite](https://vitejs.dev/), [React](https://react.dev/), [Material UI](https://mui.com/), [Tailwind CSS](https://tailwindcss.com/), and [Zustand](https://zustand-demo.pmnd.rs/).
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+## Features
 
-<!-- #target-branch-reference -->
+- Responsive design with Material UI and Tailwind CSS
+- Light, dark, and system theme support
+- Interactive sections: About, Benefits, Types, Recipes, FAQs, Events, and more
+- Newsletter signup and event sidebar
+- Downloadable recipe booklet (demo)
+- Animated transitions and snackbars
+- State management with Zustand
 
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/material-ui-vite-tailwind-ts
-cd material-ui-vite-tailwind-ts
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```sh
+git clone https://github.com/your-username/goat-cheese-app.git
+cd goat-cheese-app
+npm install
 ```
 
-Install it and run:
+### Development
 
-```bash
-npm install
+Start the development server:
+
+```sh
 npm run dev
 ```
 
-or:
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-<!-- #target-branch-reference -->
+### Build
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/mui/material-ui/tree/master/examples/material-ui-vite-tailwind-ts)
+To build for production:
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-vite-tailwind-ts)
+```sh
+npm run build
+```
 
-## The idea behind the example
+To preview the production build:
 
-This example demonstrates how you can use [Tailwind CSS](https://tailwindcss.com/) and [Vite](https://github.com/vitejs/vite) together with Material UI.
-It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in Material UI.
+```sh
+npm run preview
+```
 
-## What's next?
+## Project Structure
 
-<!-- #host-reference -->
+- `src/` – Main source code (components, theme, stores, assets)
+- `public/` – Static files and images
+- `index.html` – Main HTML entry point
+- `vite.config.ts` – Vite configuration
+- `tsconfig.*.json` – TypeScript configuration
 
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+## Customization
+
+- Update theme colors in [`src/theme/material-theme.json`](src/theme/material-theme.json)
+- Add or edit cheese types in [`src/components/Types/Types.json`](src/components/Types/Types.json)
+- Update FAQs in [`src/components/FAQs/FAQs.json`](src/components/FAQs/FAQs.json)
+
+## Credits
+
+- Goat cheese illustrations and images from Unsplash and credited sources
+- Built with [Material UI](https://mui.com/) and [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+&copy; {year} Goat Cheese Day. All rights reserved.

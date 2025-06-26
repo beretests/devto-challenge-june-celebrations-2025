@@ -1,53 +1,59 @@
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import Slider from "@mui/material/Slider";
-import PopoverMenu from "./PopOverMenu";
-import ProTip from "./ProTip";
 import { ThemeProvider } from "./components/ThemeProvider";
 import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Header";
-
-function Copyright() {
-  return (
-    <Typography
-      variant="body2"
-      align="center"
-      sx={{
-        color: "text.secondary",
-      }}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="/">
-        Goat Cheese Day
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { Box, useTheme, useMediaQuery } from "@mui/material";
+import { useEffect, useState } from "react";
+import AboutSection from "./components/About";
+import SectionFAB from "./components/SectionFAB";
+import FAQsSection from "./components/FAQs/FAQs";
+import RecipesSection from "./components/Recipes";
+import SidebarSection from "./components/Sidebar";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+import BenefitsSection from "./components/BenefitsSection";
+import TypesSection from "./components/Types/TypesSection";
+import AlertSnackbar from "./components/AlertSnackbar";
 
 export default function App() {
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const scrollTo = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <ThemeProvider>
       <CssBaseline enableColorScheme />
       <Header />
-      <Container maxWidth="sm">
-        <div className="my-4">
-          <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-            Material UI Vite example with Tailwind CSS in TypeScript
-          </Typography>
-          <Slider
-            className="my-4"
-            defaultValue={30}
-            classes={{ active: "shadow-none" }}
-            slotProps={{ thumb: { className: "hover:shadow-none" } }}
-          />
-          <PopoverMenu />
-          <ProTip />
-          <Copyright />
-        </div>
-      </Container>
+      {/* Main Layout */}
+      <Box display="flex" flexDirection={isMdUp ? "row" : "column"}>
+        <Box flex={1}>
+          <HeroSection />
+          <AboutSection />
+          <BenefitsSection />
+          <TypesSection />
+          <RecipesSection />
+          <FAQsSection />
+          <SectionFAB scrollTo={scrollTo} showScrollTop={showScrollTop} />
+          <Footer />
+        </Box>
+
+        <SidebarSection />
+        <AlertSnackbar />
+      </Box>
     </ThemeProvider>
   );
 }
