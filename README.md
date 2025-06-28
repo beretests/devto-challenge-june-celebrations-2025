@@ -1,4 +1,4 @@
-# Goat Cheese Day – Vite + React + Material UI + Tailwind CSS
+# DevTo Challenge: June Celebrations 2025 (Goat Cheese Day) – Vite + React + Material UI + Tailwind CSS
 
 Celebrate Goat Cheese Day with this interactive, modern web app built using [Vite](https://vitejs.dev/), [React](https://react.dev/), [Material UI](https://mui.com/), [Tailwind CSS](https://tailwindcss.com/), and [Zustand](https://zustand-demo.pmnd.rs/).
 

@@ -1,13 +1,26 @@
 import React from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
 import HeroImage from "../assets/images/hero/still-life-fresh-cheese.jpg";
+import { useEventAnimation } from "../stores/eventAnimationStore";
+
+const buttons = [
+  { label: "Explore Events", targetId: "events" },
+  { label: "Learn about Goat Cheese", targetId: "about" },
+  { label: "Get Recipes", targetId: "recipes" },
+];
 
 const HeroSection: React.FC = () => {
-  const buttons = [
-    { label: "Explore Events", targetId: "events" },
-    { label: "Learn about Goat Cheese", targetId: "about" },
-    { label: "Get Recipes", targetId: "recipes" },
-  ];
+  const { animate } = useEventAnimation();
+
+  const handleClick = (targetId: string) => {
+    const section = document.getElementById(targetId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      if (targetId === "events") {
+        animate();
+      }
+    }
+  };
 
   return (
     <Box
@@ -79,10 +92,7 @@ const HeroSection: React.FC = () => {
             size="large"
             sx={{ mx: 1, my: 2 }}
             onClick={() => {
-              const section = document.getElementById(targetId);
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
+              handleClick(targetId);
             }}
           >
             {label}
@@ -112,7 +122,6 @@ const HeroSection: React.FC = () => {
         </a>
       </Typography>
     </Box>
-    // </Box>
   );
 };
 

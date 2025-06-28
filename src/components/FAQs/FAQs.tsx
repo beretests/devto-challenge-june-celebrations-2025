@@ -25,11 +25,12 @@ const FAQsSection: React.FC = () => {
     <Box
       id="faqs"
       sx={{
-        height: "100vh",
+        minHeight: { xs: "auto", md: "100vh" },
         display: "flex",
         backgroundColor: "background.paper",
         alignItems: "center",
         px: 2,
+        py: { xs: 4, md: 0 },
         position: "relative",
       }}
     >

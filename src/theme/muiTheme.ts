@@ -73,12 +73,6 @@ const buildMuiTheme = (scheme: any, mode: "light" | "dark"): ThemeOptions => ({
       fontWeight: 500,
       color: scheme.onBackground,
     },
-    // h6: {
-    //   fontFamily: '"Playfair Display Variable", serif',
-    //   fontSize: "1.75rem",
-    //   fontWeight: 500,
-    //   color: scheme.onPrimary,
-    // },
     body1: {
       fontFamily: '"Lora Variable", serif',
       fontSize: "1rem",
