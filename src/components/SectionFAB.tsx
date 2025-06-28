@@ -9,23 +9,15 @@ interface SectionFABProps {
 
 const SectionFAB: React.FC<SectionFABProps> = ({ scrollTo, showScrollTop }) => {
   return (
-    // <Box
-    //   role="presentation"
-    //   sx={{
-    //     position: "absolute",
-    //     bottom: 24,
-    //     right: 16,
-    //   }}
-    //   onClick={() => scrollTo("hero")}
-    // >
-    //   <Fab color="secondary" size="small" aria-label="scroll back to top">
-    //     <KeyboardArrowUpIcon />
-    //   </Fab>
-    // </Box>
     <Zoom in={showScrollTop}>
       <Box
         role="presentation"
-        sx={{ position: "fixed", bottom: 80, right: 340, zIndex: 1300 }}
+        sx={{
+          position: "fixed",
+          bottom: 80,
+          right: { xs: 28, sm: 32, md: 340 },
+          zIndex: 1300,
+        }}
         onClick={() => scrollTo("hero")}
       >
         <Fab color="secondary" size="small" aria-label="scroll back to top">

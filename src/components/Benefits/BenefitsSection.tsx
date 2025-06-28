@@ -9,13 +9,7 @@ import {
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { motion, useInView } from "framer-motion";
-
-const benefits = [
-  "Easier to digest than cow’s milk cheese",
-  "Lower in fat and calories",
-  "Rich in calcium and probiotics",
-  "Perfect for lactose-sensitive individuals",
-];
+import benefits from "./Benefits";
 
 const BenefitsSection: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);

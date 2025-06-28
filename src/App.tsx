@@ -10,7 +10,7 @@ import RecipesSection from "./components/Recipes";
 import SidebarSection from "./components/Sidebar";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
-import BenefitsSection from "./components/BenefitsSection";
+import BenefitsSection from "./components/Benefits/BenefitsSection";
 import TypesSection from "./components/Types/TypesSection";
 import AlertSnackbar from "./components/AlertSnackbar";
 

@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { useAlertStore } from "../stores/alertStore";
+import EventsSection from "./Events/EventsSection";
 
 const SidebarSection: React.FC = () => {
   const theme = useTheme();
@@ -102,35 +103,7 @@ const SidebarSection: React.FC = () => {
           Subscribe
         </Button>
       </Paper>
-
-      <Paper elevation={1} sx={{ p: 2, mt: 4 }} id="events">
-        <Typography variant="h6" fontWeight="bold" gutterBottom>
-          Upcoming Events
-        </Typography>
-        <Typography gutterBottom>
-          Celebrate Goat Cheese Day in style! Check out what's happening near
-          you:
-        </Typography>
-        <List>
-          {[
-            { date: "June 27", event: "Goat Cheese Tasting – Toronto" },
-            { date: "June 28", event: "Live Farm Tour – Online" },
-            { date: "June 29", event: "Recipe Contest Deadline" },
-          ].map((item, idx) => (
-            <ListItem
-              key={idx}
-              alignItems="flex-start"
-              disablePadding
-              sx={{ mb: 1 }}
-            >
-              <ListItemText
-                primaryTypographyProps={{ fontWeight: "medium" }}
-                primary={`${item.date}: ${item.event}`}
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Paper>
+      <EventsSection />
     </Box>
   );
 };
